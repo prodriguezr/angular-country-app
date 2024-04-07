@@ -3,13 +3,24 @@
 
 <div class="row">
   <div class="col">
-    <shared-search-box
-      placeholder="Buscar..."
-      (onValue)="searchByRegion($event)"
-    ></shared-search-box>
+    <div class="row" style="display: flex; align-items: center">
+      <div class="col-2">
+        <h6>Select a region:</h6>
+      </div>
+      <div class="col text-left">
+        <button
+          *ngFor="let region of regions"
+          class="btn btn-light btn-xl mx-2"
+          [ngClass]="{ 'btn-outline-primary': selectedRegion === region }"
+          (click)="searchByRegion(region)"
+        >
+          {{ region }}
+        </button>
+      </div>
+    </div>
   </div>
 </div>
-<div class="row mt-3">
+<div *ngIf="selectedRegion" class="row mt-3">
   <div class="col">
     <countries-results [countries]="countries"></countries-results>
   </div>

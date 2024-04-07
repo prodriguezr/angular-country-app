@@ -10,6 +10,8 @@ import { switchMap } from 'rxjs';
   styles: ``,
 })
 export class CountryPageComponent implements OnInit {
+  public isLoading: boolean = false;
+
   translates: Translate[] = [
     { code: 'ara', name: 'Arabic' },
     { code: 'bre', name: 'Breton' },

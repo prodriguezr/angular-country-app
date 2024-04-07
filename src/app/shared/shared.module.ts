@@ -6,7 +6,11 @@ import {
   AboutPageComponent,
   ContactPageComponent,
 } from './pages';
-import { SearchBoxComponent, SidebarComponent } from './components';
+import {
+  LoaderSpinnerComponent,
+  SearchBoxComponent,
+  SidebarComponent,
+} from './components';
 import { CustomNumberPipe } from './pipes/custom-number.pipe';
 
 @NgModule({
@@ -17,6 +21,7 @@ import { CustomNumberPipe } from './pipes/custom-number.pipe';
     ContactPageComponent,
     SearchBoxComponent,
     CustomNumberPipe,
+    LoaderSpinnerComponent,
   ],
   imports: [RouterModule],
   exports: [
@@ -26,6 +31,7 @@ import { CustomNumberPipe } from './pipes/custom-number.pipe';
     ContactPageComponent,
     SearchBoxComponent,
     CustomNumberPipe,
+    LoaderSpinnerComponent,
   ],
 })
 export class SharedModule {}

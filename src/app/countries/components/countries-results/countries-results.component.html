@@ -25,7 +25,7 @@
         <td><img [src]="country.flags.svg" [alt]="country.name.common" /></td>
         <td>{{ country.name.common }}</td>
         <td>{{ country.capital }}</td>
-        <td class="text-right">{{ country.population | number }}</td>
+        <td class="text-right">{{ country.population | customNumber }}</td>
         <td>
           <a [routerLink]="['/countries/by', country.cca3]">Show more...</a>
         </td>
